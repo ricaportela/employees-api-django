@@ -11,7 +11,9 @@ class TestEmployeesApi(rest_framework.test.APITestCase):
 
     def test_employee_data(self):
         url = 'employees'
-        data = {"name":"Roberto Antonio Brito","email":"robertoempregado@empresa.com.br","departament":1},{"name":"Maria Ines","email":"mariainesempregado@empresa.com.br","departament":2},{"name":"Joao Pereira","email":"joao_pereira@empresa.com.br","departament":3}
+        data = {"name":"Roberto Antonio Brito","email":"robertoempregado@empresa.com.br","departament":1},\
+               {"name":"Maria Ines","email":"mariainesempregado@empresa.com.br","departament":2},\
+               {"name":"Joao Pereira","email":"joao_pereira@empresa.com.br","departament":3}
         response = self.client.get(url, data, format='json')
         self.assertEqual(response.data, data)
 

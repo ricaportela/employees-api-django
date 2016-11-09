@@ -23,6 +23,9 @@ from core import views
 urlpatterns = (
     url(r'^admin/', admin.site.urls),
     url(r'^employees/', views.EmployeesList.as_view()),
+    url(r'^employees/details', views.EmployeesDetails.as_view()),
+    url(r'^employees/details/(?P<pk>[0-9]+)/$', views.EmployeesDetails.as_view()),
+
     url(r'^$', RedirectView.as_view(url='/employees/'), name='redirect_to_employees'),
 
 
