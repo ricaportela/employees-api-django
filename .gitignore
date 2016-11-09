@@ -1,0 +1,10 @@
+.venv
+.idea
+/npm-debug.log
+*.sqlite3
+__pycache__
+*.pyc
+
+
+#local development on OSX
+*.DS_Store
