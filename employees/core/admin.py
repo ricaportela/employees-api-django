@@ -5,7 +5,7 @@ from employees.core.models import Departament, Employees
 
 @admin.register(Departament)
 class DepartamentAdmin(admin.ModelAdmin):
-    list_display = ('description')
+    list_display = ('description',)
 
 
 @admin.register(Employees)
