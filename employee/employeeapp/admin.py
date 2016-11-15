@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from employees.core.models import Departament, Employees
+from employeeapp.models import Departament, Employee
 
 
 @admin.register(Departament)
@@ -8,7 +8,6 @@ class DepartamentAdmin(admin.ModelAdmin):
     list_display = ('description',)
 
 
-@admin.register(Employees)
-class EmployeesAdmin(admin.ModelAdmin):
+@admin.register(Employee)
+class EmployeeAdmin(admin.ModelAdmin):
     list_display = ('name', 'email', 'departament')
-

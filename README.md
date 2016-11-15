@@ -5,8 +5,8 @@ Getting Started
 ---------------
 
 ### Initial Setup ###
-1. Make a new virtualenv: ``virtualenv .venv``
-2. Activate the virtualenv: ``source env/bin/activate``
+1. On Linux make a new virtualenv: ``virtualenv -p /usr/bin/python3 .venv`` 
+2. Activate the virtualenv: ``source .venv/bin/activate``
 3. Install Django: ``pip install -r requirements.txt``
 4. Edit ``employees/settings.py:108`` to match your LANGUAGE_CODE 
 5. Run the server: ``python manage.py runserver``
