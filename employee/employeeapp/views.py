@@ -17,8 +17,8 @@ class EmployeeList(APIView):
         serializer = EmployeeSerializer(employee, many=True)
         return Response(serializer.data)
 
-    def post(self, request, format=None):
-        employee = EmployeeSerializer(data=request.DATA)
+    def post(self, request):
+        employee = EmployeeSerializer(data=request.data)
         if employee.is_valid():
             employee.save()
             return Response(employee.data, status=status.HTTP_201_CREATED)
@@ -46,7 +46,7 @@ class EmployeeDetails(APIView):
 
     def put(self, request, pk, format=None):
         employee = self.get_object(pk)
-        serializer = EmployeeSerializer(employee, data=request.DATA)
+        serializer = EmployeeSerializer(employee, data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
